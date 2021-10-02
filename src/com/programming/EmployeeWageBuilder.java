@@ -11,6 +11,9 @@ public class EmployeeWageBuilder {
 
 
     public static void main(String[] args) {
+        wageComputation();
+    }
+    public static void wageComputation(){
         System.out.println("Welcome to employee computation program");
         int wage = 0;
         int workingHrs = 0;
