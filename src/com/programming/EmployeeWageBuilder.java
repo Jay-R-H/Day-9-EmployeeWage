@@ -7,6 +7,7 @@ public class EmployeeWageBuilder {
     public static final int isPartTime = 2;
     public static final int wagePerHour = 20;
     public static final int totalWorkingDays = 20;
+    public static  int totalWorkingHours = 100;
 
 
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class EmployeeWageBuilder {
         int workingDays = 0;
         int totalWage = 0;
 
-        while (totalWorkingDays > workingDays) {
+        while (totalWorkingDays > workingDays && totalWorkingHours>workingHrs) {
             int employeeCheck = (int) Math.floor((Math.random() * 10) % 3);
             workingDays++;
             switch (employeeCheck) {
@@ -32,6 +33,7 @@ public class EmployeeWageBuilder {
                     workingHrs = 0;
                     System.out.println("Employee is absent");
             }
+            totalWorkingHours+=workingHrs;
             wage = wagePerHour * workingHrs;
             totalWage += wage;
         }
